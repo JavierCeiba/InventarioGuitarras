@@ -48,7 +48,7 @@ pipeline {
       steps{
         echo '------------>Análisis de código estático<------------'
         sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:inventario.guitarras-javier.rosas', 
-        sonarName:'CeibaADN-InventarioGuitarras(javier.rosas)', 
+        sonarName:'CeibaADN-InventarioGuitarras[javier.rosas]',
         sonarPathProperties:'./sonar-project.properties')
       }
     }

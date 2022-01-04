@@ -18,19 +18,19 @@ public class Envio {
     private Long id;
     private Long idGuitarra;
     private Long idEmpresa;
-    private LocalDateTime fechaEnvío;
+    private LocalDateTime fechaEnvio;
     private LocalDate fechaEntrega;
     private Double valorTotal;
 
-    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDateTime fechaEnvío, Double valorTotal) {
+    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDateTime fechaEnvio, Double valorTotal) {
         validarObligatorio(idGuitarra, SE_DEBE_SELECCIONAR_LA_GUITARRA);
         validarObligatorio(idEmpresa, SE_DEBE_SELECCIONAR_LA_EMPRESA);
-        validarObligatorio(fechaEnvío, SE_DEBE_INGRESAR_LA_FECHA);
+        validarObligatorio(fechaEnvio, SE_DEBE_INGRESAR_LA_FECHA);
 
         this.id = id;
         this.idGuitarra = idGuitarra;
         this.idEmpresa = idEmpresa;
-        this.fechaEnvío = fechaEnvío;
+        this.fechaEnvio = fechaEnvio;
         this.valorTotal = valorTotal;
 
     }

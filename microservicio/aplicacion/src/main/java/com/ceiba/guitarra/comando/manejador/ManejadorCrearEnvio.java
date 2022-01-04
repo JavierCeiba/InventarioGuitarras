@@ -14,8 +14,8 @@ public class ManejadorCrearEnvio implements ManejadorComandoRespuesta<ComandoEnv
     private final FabricaEnvio fabricaEnvio;
     private final ServicioCrearEnvio servicioCrearEnvio;
 
-    public ManejadorCrearEnvio(FabricaEnvio FabricaEnvio, ServicioCrearEnvio servicioCrearEnvio) {
-        this.fabricaEnvio = FabricaEnvio;
+    public ManejadorCrearEnvio(FabricaEnvio fabricaEnvio, ServicioCrearEnvio servicioCrearEnvio) {
+        this.fabricaEnvio = fabricaEnvio;
         this.servicioCrearEnvio = servicioCrearEnvio;
     }
 

@@ -26,7 +26,7 @@ public class EnvioTest {
         assertEquals(3, envio.getId());
         assertEquals(1, envio.getIdGuitarra());
         assertEquals(2, envio.getIdEmpresa());
-        assertEquals(fechaEnvio, envio.getFechaEnvío());
+        assertEquals(fechaEnvio, envio.getFechaEnvio());
         assertEquals(3650d, envio.getValorTotal());
     }
 

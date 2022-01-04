@@ -36,21 +36,21 @@ public class ServicioCrearEnvio {
     }
 
     private void validarEnvios(Envio envio) {
-        if (envio.getFechaEnvío().getDayOfWeek().equals(DayOfWeek.SATURDAY) ||
-                envio.getFechaEnvío().getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
+        if (envio.getFechaEnvio().getDayOfWeek().equals(DayOfWeek.SATURDAY) ||
+                envio.getFechaEnvio().getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
             throw new ExcepcionValorInvalido(FECHA_DE_ENVIO_INVALIDA);
         }
     }
 
     private void validarDescuento(Envio envio){
-        if (envio.getFechaEnvío().getDayOfWeek().equals(DayOfWeek.TUESDAY)){
+        if (envio.getFechaEnvio().getDayOfWeek().equals(DayOfWeek.TUESDAY)){
             envio.setValorTotal(envio.getValorTotal()*.95);
         }
     }
 
     private void generarFechaEntrega(Envio envio){
         int diasEntrega = 3;
-        LocalDate fechaEntrega = LocalDate.from(envio.getFechaEnvío());
+        LocalDate fechaEntrega = LocalDate.from(envio.getFechaEnvio());
         do {
             fechaEntrega = fechaEntrega.plusDays(1);
             if (!fechaEntrega.getDayOfWeek().equals(DayOfWeek.SATURDAY) &&

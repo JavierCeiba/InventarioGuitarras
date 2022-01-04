@@ -12,7 +12,7 @@ public class DtoEnvio {
     private Long id;
     private DtoGuitarra guitarra;
     private DtoEmpresa empresa;
-    private LocalDateTime fechaEnvío;
+    private LocalDateTime fechaEnvio;
     private LocalDate fechaEntrega;
     private Double valorTotal;
 

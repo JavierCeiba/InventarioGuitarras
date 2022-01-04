@@ -30,11 +30,11 @@ public class MapeoEnvio implements RowMapper<DtoEnvio>, MapperResult {
         Long id = resultSet.getLong("id");
         DtoGuitarra guitarra = generarDtoGuitarra(resultSet.getLong("id_guitarra"));
         DtoEmpresa empresa = generarDtoEmpresa(resultSet.getLong("id_empresa"));
-        LocalDateTime fechaEnvío = extraerLocalDateTime(resultSet, "fecha_envio");
+        LocalDateTime fechaEnvio = extraerLocalDateTime(resultSet, "fecha_envio");
         Double valorTotal = resultSet.getDouble("valor_total");
         LocalDate fechaEntrega = extraerLocalDate(resultSet, "fecha_entrega");
 
-        return new DtoEnvio(id,guitarra,empresa,fechaEnvío,fechaEntrega,valorTotal);
+        return new DtoEnvio(id,guitarra,empresa,fechaEnvio,fechaEntrega,valorTotal);
     }
 
     private DtoGuitarra generarDtoGuitarra(Long idGuitarra){

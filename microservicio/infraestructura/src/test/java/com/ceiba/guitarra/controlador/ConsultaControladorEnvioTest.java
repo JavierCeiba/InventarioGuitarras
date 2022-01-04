@@ -36,7 +36,7 @@ class ConsultaControladorEnvioTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].fechaEnvío", is("2022-01-07 12:30:00")))
+                .andExpect(jsonPath("$[0].fechaEnvio", is("2022-01-07 12:30:00")))
                 .andExpect(jsonPath("$[0].fechaEntrega", is("2022-01-12")))
                 .andExpect(jsonPath("$[0].valorTotal", is(2700d)));
     }

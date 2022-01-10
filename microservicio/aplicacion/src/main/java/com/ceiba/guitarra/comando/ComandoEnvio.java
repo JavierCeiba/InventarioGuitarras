@@ -12,7 +12,7 @@ import lombok.Setter;
 public class ComandoEnvio {
 
     private Long id;
-    private Long id_guitarra;
-    private Long id_empresa;
-    private String fecha_envío;
+    private Long idGuitarra;
+    private Long idEmpresa;
+    private String fechaEnvío;
 }

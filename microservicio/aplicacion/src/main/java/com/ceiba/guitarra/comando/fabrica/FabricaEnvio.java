@@ -22,10 +22,10 @@ public class FabricaEnvio {
     public Envio crear(ComandoEnvio comandoEnvio) {
         return new Envio(
                 comandoEnvio.getId(),
-                comandoEnvio.getId_guitarra(),
-                comandoEnvio.getId_empresa(),
-                generarFecha(comandoEnvio.getFecha_envío()),
-                generarValorTotal(comandoEnvio.getId_guitarra())
+                comandoEnvio.getIdGuitarra(),
+                comandoEnvio.getIdEmpresa(),
+                generarFecha(comandoEnvio.getFechaEnvío()),
+                generarValorTotal(comandoEnvio.getIdGuitarra())
         );
     }
 

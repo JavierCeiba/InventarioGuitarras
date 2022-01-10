@@ -24,7 +24,7 @@ public class FabricaEnvio {
                 comandoEnvio.getId(),
                 comandoEnvio.getIdGuitarra(),
                 comandoEnvio.getIdEmpresa(),
-                generarFecha(comandoEnvio.getFechaEnvío()),
+                generarFecha(comandoEnvio.getFechaEnvio()),
                 generarValorTotal(comandoEnvio.getIdGuitarra())
         );
     }

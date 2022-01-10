@@ -14,5 +14,5 @@ public class ComandoEnvio {
     private Long id;
     private Long idGuitarra;
     private Long idEmpresa;
-    private String fechaEnvío;
+    private String fechaEnvio;
 }

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/guitarras")
 @Api(tags = { "Controlador comando guitarra"})
 public class ComandoControladorGuitarra {

@@ -14,7 +14,7 @@ public class FabricaGuitarra {
                 comandoGuitarra.getTipo(),
                 comandoGuitarra.getReferencia(),
                 comandoGuitarra.getPrecio(),
-                comandoGuitarra.getEnviado()
+                false
         );
     }
 

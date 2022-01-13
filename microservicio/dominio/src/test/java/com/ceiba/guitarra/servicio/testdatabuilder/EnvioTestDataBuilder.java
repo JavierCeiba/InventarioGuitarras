@@ -3,21 +3,20 @@ package com.ceiba.guitarra.servicio.testdatabuilder;
 import com.ceiba.guitarra.modelo.entidad.Envio;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class EnvioTestDataBuilder {
 
     private Long id;
     private Long idGuitarra;
     private Long idEmpresa;
-    private LocalDateTime fechaEnvío;
+    private LocalDate fechaEnvio;
     private LocalDate fechaEntrega;
     private Double valorTotal;
 
     public EnvioTestDataBuilder() {
         idGuitarra = 1L;
         idEmpresa = 2L;
-        fechaEnvío = LocalDateTime.now();
+        fechaEnvio = LocalDate.now();
         valorTotal = 3500d;
     }
 
@@ -36,8 +35,8 @@ public class EnvioTestDataBuilder {
         return this;
     }
 
-    public EnvioTestDataBuilder conFechaDeEnvio(LocalDateTime fechaEnvío) {
-        this.fechaEnvío = fechaEnvío;
+    public EnvioTestDataBuilder conFechaDeEnvio(LocalDate fechaEnvio) {
+        this.fechaEnvio = fechaEnvio;
         return this;
     }
 
@@ -47,6 +46,6 @@ public class EnvioTestDataBuilder {
     }
 
     public Envio build() {
-        return new Envio(id, idGuitarra, idEmpresa, fechaEnvío, valorTotal);
+        return new Envio(id, idGuitarra, idEmpresa, fechaEnvio, valorTotal);
     }
 }

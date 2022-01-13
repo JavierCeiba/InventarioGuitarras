@@ -41,6 +41,3 @@ INSERT INTO empresa VALUES
 INSERT INTO guitarra VALUES
 (1, 'Gibson', 'LessPaul', '269285', 2500, false),
 (2, 'Fender', 'LessPaul', '269555', 3500, false);
-
-INSERT INTO envio VALUES
-(1, 1, 2, '2022-01-07 12:30', 2700, '2022-01-12');

@@ -36,8 +36,8 @@ public class ServicioCrearEnvioTest {
     @DisplayName("Deberia lanzar una exepcion cuando se envie una guitarra el sabado")
     void deberiaLanzarUnaExepcionCuandoSeHagaUnEnvioElSabado() {
         // arrange
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime fechaEnvio = LocalDateTime.parse("2022-01-08 12:30", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaEnvio = LocalDate.parse("2022-01-08", formatter);
         Envio envio = new EnvioTestDataBuilder().conId(1L).conFechaDeEnvio(fechaEnvio).build();
         RepositorioEnvio repositorioEnvio = Mockito.mock(RepositorioEnvio.class);
         Mockito.when(repositorioEnvio.existePorId(Mockito.anyLong())).thenReturn(false);
@@ -51,8 +51,8 @@ public class ServicioCrearEnvioTest {
     @DisplayName("Deberia lanzar una exepcion cuando se envie una guitarra el domingo")
     void deberiaLanzarUnaExepcionCuandoSeHagaUnEnvioElDomingo() {
         // arrange
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime fechaEnvio = LocalDateTime.parse("2022-01-09 12:30", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaEnvio = LocalDate.parse("2022-01-09", formatter);
         Envio envio = new EnvioTestDataBuilder().conId(1L).conFechaDeEnvio(fechaEnvio).build();
         RepositorioEnvio repositorioEnvio = Mockito.mock(RepositorioEnvio.class);
         Mockito.when(repositorioEnvio.existePorId(Mockito.anyLong())).thenReturn(false);
@@ -66,8 +66,8 @@ public class ServicioCrearEnvioTest {
     @DisplayName("Deberia Crear el envio de manera correcta")
     void deberiaCrearElEnvioDeManeraCorrecta() {
         // arrange
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime fechaEnvio = LocalDateTime.parse("2022-01-11 12:30", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaEnvio = LocalDate.parse("2022-01-11", formatter);
         Double valorTotal = 2500d;
         Envio envio = new EnvioTestDataBuilder().conValorTotal(valorTotal)
                 .conFechaDeEnvio(fechaEnvio).build();

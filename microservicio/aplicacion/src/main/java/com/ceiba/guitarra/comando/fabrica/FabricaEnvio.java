@@ -8,7 +8,7 @@ import com.ceiba.guitarra.modelo.entidad.Envio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Component
@@ -29,9 +29,9 @@ public class FabricaEnvio {
         );
     }
 
-    private LocalDateTime generarFecha(String fecha){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        return LocalDateTime.parse(fecha, formatter);
+    private LocalDate generarFecha(String fecha){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return LocalDate.parse(fecha, formatter);
     }
 
     private Double generarValorTotal(Long idGuitarra){

@@ -18,11 +18,11 @@ public class Envio {
     private Long id;
     private Long idGuitarra;
     private Long idEmpresa;
-    private LocalDateTime fechaEnvio;
+    private LocalDate fechaEnvio;
     private LocalDate fechaEntrega;
     private Double valorTotal;
 
-    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDateTime fechaEnvio, Double valorTotal) {
+    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDate fechaEnvio, Double valorTotal) {
         validarObligatorio(idGuitarra, SE_DEBE_SELECCIONAR_LA_GUITARRA);
         validarObligatorio(idEmpresa, SE_DEBE_SELECCIONAR_LA_EMPRESA);
         validarObligatorio(fechaEnvio, SE_DEBE_INGRESAR_LA_FECHA);

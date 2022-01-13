@@ -7,7 +7,7 @@ import com.ceiba.guitarra.servicio.testdatabuilder.EnvioTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,7 +18,7 @@ public class EnvioTest {
     void deberiaCrearCorrectamenteElEnvio() {
         // arrange
         Double valorTotal = 3650d;
-        LocalDateTime fechaEnvio = LocalDateTime.now();
+        LocalDate fechaEnvio = LocalDate.now();
         //act
         Envio envio = new EnvioTestDataBuilder().conId(3L)
                 .conFechaDeEnvio(fechaEnvio).conValorTotal(valorTotal).build();

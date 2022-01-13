@@ -7,12 +7,12 @@ public class ComandoEnvioTestDataBuilder {
     private Long id;
     private Long id_guitarra;
     private Long id_empresa;
-    private String fecha_envío;
+    private String fecha_envio;
 
     public ComandoEnvioTestDataBuilder() {
         id_guitarra = 1L;
         id_empresa = 2L;
-        fecha_envío = "2022-01-11 12:30";
+        fecha_envio = "2022-01-11";
     }
 
     public ComandoEnvioTestDataBuilder conId_guitarra(Long id_guitarra) {
@@ -26,6 +26,6 @@ public class ComandoEnvioTestDataBuilder {
     }
 
     public ComandoEnvio build() {
-        return new ComandoEnvio(id, id_guitarra, id_empresa, fecha_envío);
+        return new ComandoEnvio(id, id_guitarra, id_empresa, fecha_envio);
     }
 }

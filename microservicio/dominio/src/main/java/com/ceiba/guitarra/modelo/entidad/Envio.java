@@ -1,13 +1,14 @@
 package com.ceiba.guitarra.modelo.entidad;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
+@AllArgsConstructor
 @Getter
 public class Envio {
 
@@ -22,7 +23,7 @@ public class Envio {
     private LocalDate fechaEntrega;
     private Double valorTotal;
 
-    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDate fechaEnvio, Double valorTotal) {
+    public Envio(Long id, Long idGuitarra, Long idEmpresa, LocalDate fechaEnvio) {
         validarObligatorio(idGuitarra, SE_DEBE_SELECCIONAR_LA_GUITARRA);
         validarObligatorio(idEmpresa, SE_DEBE_SELECCIONAR_LA_EMPRESA);
         validarObligatorio(fechaEnvio, SE_DEBE_INGRESAR_LA_FECHA);
@@ -31,7 +32,6 @@ public class Envio {
         this.idGuitarra = idGuitarra;
         this.idEmpresa = idEmpresa;
         this.fechaEnvio = fechaEnvio;
-        this.valorTotal = valorTotal;
 
     }
 

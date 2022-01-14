@@ -46,6 +46,8 @@ public class EnvioTestDataBuilder {
     }
 
     public Envio build() {
-        return new Envio(id, idGuitarra, idEmpresa, fechaEnvio, valorTotal);
+        Envio envio = new Envio(id, idGuitarra, idEmpresa, fechaEnvio);
+        envio.setValorTotal(valorTotal);
+        return envio;
     }
 }

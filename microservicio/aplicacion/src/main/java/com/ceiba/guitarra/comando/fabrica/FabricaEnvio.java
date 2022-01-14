@@ -24,8 +24,7 @@ public class FabricaEnvio {
                 comandoEnvio.getId(),
                 comandoEnvio.getIdGuitarra(),
                 comandoEnvio.getIdEmpresa(),
-                generarFecha(comandoEnvio.getFechaEnvio()),
-                generarValorTotal(comandoEnvio.getIdGuitarra())
+                generarFecha(comandoEnvio.getFechaEnvio())
         );
     }
 
@@ -34,9 +33,9 @@ public class FabricaEnvio {
         return LocalDate.parse(fecha, formatter);
     }
 
-    private Double generarValorTotal(Long idGuitarra){
+    public Double generarValorTotal(Long idGuitarra){
         DtoGuitarra guitarra = obtenerGuitarra.ejecutar(idGuitarra);
-        return guitarra.getPrecio() + 25d;
+        return guitarra.getPrecio() + 100d;
     }
 
 }

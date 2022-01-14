@@ -21,6 +21,7 @@ public class ManejadorCrearEnvio implements ManejadorComandoRespuesta<ComandoEnv
 
     public ComandoRespuesta<Long> ejecutar(ComandoEnvio comandoEnvio) {
         Envio envio = this.fabricaEnvio.crear(comandoEnvio);
+        envio.setValorTotal(this.fabricaEnvio.generarValorTotal(envio.getIdGuitarra()));
         return new ComandoRespuesta<>(this.servicioCrearEnvio.ejecutar(envio));
     }
 }
